@@ -15,7 +15,9 @@
   },
   "main": "elect.js",
   "dependencies": {
+    "pixi.js": "^4.6.2",
     "vue": "^2.5.2",
+    "vue-resize": "^0.4.3",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

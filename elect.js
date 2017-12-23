@@ -7,6 +7,8 @@ app.on('ready', function () {
   // Initialize the window to our specified dimensions
   win = new BrowserWindow({ width: 1000, height: 600 });
 
+  BrowserWindow.addDevToolsExtension('vue-devtools/3.1.7_0')
+
   // Specify entry point to default entry point of vue.js
   win.loadURL('http://localhost:8080');
 
