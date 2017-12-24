@@ -23,6 +23,7 @@
 
 <script>
 import * as PIXI from 'pixi.js'
+import Game from '../Game'
 
 export default {
   name: 'HelloWorld',
@@ -40,7 +41,6 @@ export default {
       this.width = window.innerWidth - 20
       this.height = window.innerHeight - 20
       this.pixi.renderer.resize(this.width, this.height)
-      console.log(this.pixi.stage)
       this.bunny.x = this.pixi.renderer.width / 2
       this.bunny.y = this.pixi.renderer.height / 2
     }
@@ -61,12 +61,9 @@ export default {
 
     this.pixi.stage.addChild(this.bunny)
 
-    // Listen for animate update
+    let game = new Game(this.pixi, this.bunny)
     this.pixi.ticker.add(delta => {
-      // just for fun, let's rotate mr rabbit a little
-      // delta is 1 if running at 100% performance
-      // creates frame-independent tranformation
-      this.bunny.rotation += 0.1 * delta
+      game.handleTick(delta)
     })
   }
 }
