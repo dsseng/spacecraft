@@ -22,14 +22,15 @@
 </template>
 
 <script>
-import { WebGLRenderer } from 'pixi.js'
+import * as PIXI from 'pixi.js'
 
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      renderer: {},
+      pixi: {},
+      bunny: {},
       width: window.innerWidth - 20,
       height: window.innerHeight - 20
     }
@@ -38,45 +39,36 @@ export default {
     resize () {
       this.width = window.innerWidth - 20
       this.height = window.innerHeight - 20
-      this.renderer.resize(this.width, this.height)
+      this.pixi.renderer.resize(this.width, this.height)
+      console.log(this.pixi.stage)
+      this.bunny.x = this.pixi.renderer.width / 2
+      this.bunny.y = this.pixi.renderer.height / 2
     }
   },
   mounted () {
-    const options = {
-      transparent: true,
-      autoResize: true,
-      antialias: true,
-      resolution: 1 || window.devicePixelRatio // TODO: Optimize Ratio
-    }
-    this.renderer = new WebGLRenderer(this.width, this.height, options)
-    this.$el.appendChild(this.renderer.view)
-  }/* ,
-  created () {
-    var app = new PIXI.Application(800, 600, {
-      backgroundColor: 0x1099bb
-    })
-    this.$el.appendChild(app.view)
+    this.pixi = new PIXI.Application(this.width, this.height, { backgroundColor: 0x1099bb })
+    this.$el.appendChild(this.pixi.view)
 
     // create a new Sprite from an image path
-    var bunny = PIXI.Sprite.fromImage('http://pixelartmaker.com/art/1e457e6b4f0a31c.png')
+    this.bunny = PIXI.Sprite.fromImage('Baby-Bunny.jpg')
 
     // center the sprite's anchor point
-    bunny.anchor.set(0.5)
+    this.bunny.anchor.set(0.5)
 
     // move the sprite to the center of the screen
-    bunny.x = app.renderer.width / 2
-    bunny.y = app.renderer.height / 2
+    this.bunny.x = this.pixi.renderer.width / 2
+    this.bunny.y = this.pixi.renderer.height / 2
 
-    app.stage.addChild(bunny)
+    this.pixi.stage.addChild(this.bunny)
 
     // Listen for animate update
-    app.ticker.add(function (delta) {
+    this.pixi.ticker.add(delta => {
       // just for fun, let's rotate mr rabbit a little
       // delta is 1 if running at 100% performance
       // creates frame-independent tranformation
-      bunny.rotation += 0.1 * delta
+      this.bunny.rotation += 0.1 * delta
     })
-  } */
+  }
 }
 </script>
 
