@@ -1,0 +1,99 @@
+{
+  "name": "Astronaut",
+  "file": "AstronautSpritesheet.png",
+  "animations": {
+    "idle": {
+      "speed": 0.1,
+      "frames": [
+        {
+          "x": 33,
+          "y": 18,
+          "width": 62,
+          "height": 129
+        },
+        {
+          "x": 144,
+          "y": 18,
+          "width": 65,
+          "height": 129
+        },
+        {
+          "x": 364,
+          "y": 18,
+          "width": 65,
+          "height": 129
+        }
+      ]
+    },
+    "run": {
+      "speed": 0.125,
+      "frames": [
+        {
+          "x": 21,
+          "y": 161,
+          "width": 81,
+          "height": 127
+        },
+        {
+          "x": 565,
+          "y": 161,
+          "width": 84,
+          "height": 121
+        },
+        {
+          "x": 349,
+          "y": 162,
+          "width": 82,
+          "height": 126
+        },
+        {
+          "x": 456,
+          "y": 162,
+          "width": 86,
+          "height": 126
+        },
+        {
+          "x": 675,
+          "y": 162,
+          "width": 81,
+          "height": 126
+        },
+        {
+          "x": 863,
+          "y": 162,
+          "width": 82,
+          "height": 127
+        }
+      ]
+    },
+    "walk": {
+      "speed": 0.05,
+      "frames": [
+        {
+          "x": 22,
+          "y": 294,
+          "width": 75,
+          "height": 131
+        },
+        {
+          "x": 131,
+          "y": 294,
+          "width": 76,
+          "height": 135
+        },
+        {
+          "x": 240,
+          "y": 294,
+          "width": 77,
+          "height": 131
+        },
+        {
+          "x": 352,
+          "y": 297,
+          "width": 74,
+          "height": 127
+        }
+      ]
+    }
+  }
+}

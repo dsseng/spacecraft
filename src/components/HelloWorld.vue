@@ -29,9 +29,6 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      pixi: {},
-      bunny: {},
       width: window.innerWidth - 20,
       height: window.innerHeight - 20
     }
@@ -41,29 +38,19 @@ export default {
       this.width = window.innerWidth - 20
       this.height = window.innerHeight - 20
       this.pixi.renderer.resize(this.width, this.height)
-      this.bunny.x = this.pixi.renderer.width / 2
-      this.bunny.y = this.pixi.renderer.height / 2
+      // this.game.resize(this.width, this.height)
     }
   },
   mounted () {
     this.pixi = new PIXI.Application(this.width, this.height, { backgroundColor: 0x1099bb })
     this.$el.appendChild(this.pixi.view)
 
-    // create a new Sprite from an image path
-    this.bunny = PIXI.Sprite.fromImage('Baby-Bunny.jpg')
+    this.game = new Game.Game(this)
 
-    // center the sprite's anchor point
-    this.bunny.anchor.set(0.5)
+    this.game.init()
 
-    // move the sprite to the center of the screen
-    this.bunny.x = this.pixi.renderer.width / 2
-    this.bunny.y = this.pixi.renderer.height / 2
-
-    this.pixi.stage.addChild(this.bunny)
-
-    let game = new Game(this.pixi, this.bunny)
     this.pixi.ticker.add(delta => {
-      game.handleTick(delta)
+      this.game.tick(delta)
     })
   }
 }
