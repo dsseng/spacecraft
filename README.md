@@ -5,10 +5,12 @@
 [![forthebadge](http://forthebadge.com/images/badges/powered-by-oxygen.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-by-developers.svg)](http://forthebadge.com)
+I am using For The Badge https://forthebadge.com/
 
 > Spacecraft is game about space missions.
 
 ## Build Setup
+> Warning: build to exe, msi and other binaries isn't ready yet!
 
 ``` bash
 # install dependencies
