@@ -38,7 +38,7 @@ export default {
       this.width = window.innerWidth - 20
       this.height = window.innerHeight - 20
       this.pixi.renderer.resize(this.width, this.height)
-      // this.game.resize(this.width, this.height)
+      this.game.resize(this.width, this.height)
     }
   },
   mounted () {

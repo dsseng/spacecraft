@@ -12,7 +12,7 @@ function keyboard (keyCode) {
       key.isDown = true
       key.isUp = false
     }
-    event.preventDefault();
+    event.preventDefault()
   }
 
   // The `upHandler`
@@ -22,7 +22,7 @@ function keyboard (keyCode) {
       key.isDown = false
       key.isUp = true
     }
-    event.preventDefault();
+    event.preventDefault()
   }
 
   // Attach event listeners

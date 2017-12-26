@@ -49,6 +49,8 @@ class SpriteSheetAnimation extends PIXI.Sprite {
       this.isPlaying = true
       this.currentAnimation = name
       PIXI.ticker.shared.add(this.update, this)
+    } else {
+      this.currentAnimation = name
     }
   }
 

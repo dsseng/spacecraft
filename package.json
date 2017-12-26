@@ -15,6 +15,7 @@
   },
   "main": "elect.js",
   "dependencies": {
+    "pixi-viewport": "^0.21.4",
     "pixi.js": "^4.6.2",
     "vue": "^2.5.2",
     "vue-resize": "^0.4.3",

@@ -2465,9 +2465,13 @@ eventemitter3@1.x.x:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
 
-eventemitter3@^2.0.0:
+eventemitter3@^2.0.0, eventemitter3@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-2.0.3.tgz#b5e1079b59fb5e1ba2771c0a993be060a58c99ba"
+
+eventemitter3@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.0.0.tgz#fc29ecf233bd19fbd527bb4089bbf665dc90c1e3"
 
 events@^1.0.0:
   version "1.1.1"
@@ -2503,6 +2507,10 @@ execa@^0.7.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
+
+exists@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/exists/-/exists-1.0.1.tgz#ffcbee29142f24056df01924e73262733db10b49"
 
 exit-hook@^1.0.0:
   version "1.1.1"
@@ -5100,6 +5108,10 @@ pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
 
+penner@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/penner/-/penner-0.1.3.tgz#0b8b482d4e9b39af2f3d7c37592229b8acc29705"
+
 performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
@@ -5126,9 +5138,28 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
+pixi-ease@^0.13.6:
+  version "0.13.6"
+  resolved "https://registry.yarnpkg.com/pixi-ease/-/pixi-ease-0.13.6.tgz#838781434386208071fe4d90520f4d7d4f1aa914"
+  dependencies:
+    eventemitter3 "^3.0.0"
+    penner "^0.1.3"
+    yy-angle "^1.2.0"
+    yy-color "^1.0.0"
+    yy-loop "^0.3.1"
+
 pixi-gl-core@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/pixi-gl-core/-/pixi-gl-core-1.1.4.tgz#8b4b5c433b31e419bc379dc565ce1b835a91b372"
+
+pixi-viewport@^0.21.4:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/pixi-viewport/-/pixi-viewport-0.21.4.tgz#2328ca3f8f0cca41573f89bb6edd972ca19e2f7d"
+  dependencies:
+    exists "^1.0.1"
+    pixi-ease "^0.13.6"
+    yy-input "^0.11.2"
+    yy-loop "^0.3.5"
 
 pixi.js@^4.6.2:
   version "4.6.2"
@@ -6050,6 +6081,10 @@ schema-utils@^0.3.0:
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.3.0.tgz#f5877222ce3e931edae039f17eb3716e7137f8cf"
   dependencies:
     ajv "^5.0.0"
+
+seedrandom@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/seedrandom/-/seedrandom-2.4.3.tgz#2438504dad33917314bff18ac4d794f16d6aaecc"
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -7275,3 +7310,31 @@ yauzl@2.4.1:
   resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.4.1.tgz#9528f442dab1b2284e58b4379bb194e22e0c4005"
   dependencies:
     fd-slicer "~1.0.1"
+
+yy-angle@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/yy-angle/-/yy-angle-1.2.0.tgz#1d18f5e0229ed3cf437b28d84ca693b1e7304d17"
+
+yy-color@^1.0.0:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/yy-color/-/yy-color-1.0.7.tgz#3f923188243fabccea24d372f4b8b6e3093c65a9"
+  dependencies:
+    yy-random "^1.0.1"
+
+yy-input@^0.11.2:
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/yy-input/-/yy-input-0.11.2.tgz#18c26db0eb7cc9cffa66aee7be169daca77621dc"
+  dependencies:
+    eventemitter3 "^2.0.3"
+
+yy-loop@^0.3.1, yy-loop@^0.3.5:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/yy-loop/-/yy-loop-0.3.8.tgz#660d096601096735f30060a30d7f3eda412b4785"
+  dependencies:
+    eventemitter3 "^3.0.0"
+
+yy-random@^1.0.1:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/yy-random/-/yy-random-1.6.0.tgz#6e1a1cefb8530cdf51314bd64730baf341338fc8"
+  dependencies:
+    seedrandom "^2.4.3"
